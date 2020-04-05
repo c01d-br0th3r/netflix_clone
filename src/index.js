@@ -6,6 +6,8 @@ import { createStore, applyMiddleware, compose } from "redux";
 import createSagaMiddleware from "redux-saga";
 import rootReducer from "./reducers";
 import rootSaga from "./saga";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const sagaMiddleware = createSagaMiddleware();
 
