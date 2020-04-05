@@ -29,6 +29,9 @@ const Title = styled.div`
   margin-bottom: 20px;
   line-height: 65px;
 `;
+const Span = styled.span`
+  color: #70a1ff;
+`;
 const Summary = styled.div`
   width: 340px;
   font-size: 20px;
@@ -44,11 +47,13 @@ const Summary = styled.div`
 const MainPoster = () => {
   return (
     <Backdrop>
-      <Original>いつかこの恋を思い出してきっと泣いてしまう</Original>
+      <Original>
+        いつかこの恋を思い出してきっと<Span>泣いて</Span>しまう
+      </Original>
       <Title>
         언젠가 이 사랑을 떠올리면
         <br />
-        분명 울어버릴 것 같아.
+        분명 <Span>울어버릴 것</Span> 같아.
       </Title>
       <Summary>사랑, 이별, 그리고 청춘.</Summary>
     </Backdrop>

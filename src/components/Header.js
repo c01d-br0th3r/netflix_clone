@@ -14,7 +14,7 @@ const Container = styled.div`
 const Logo = styled.div`
   font-size: 30px;
   font-weight: 700;
-  margin-right: 60px;
+  margin-right: 40px;
   color: #e74c3c;
 `;
 const Menu = styled.div`
