@@ -3,6 +3,7 @@ import PopularMovies from "./popularMovies";
 import MainPoster from "./MainPoster";
 import GlobalStyle from "./GlobalStyles";
 import Header from "./Header";
+import NowPlayingMovies from "./nowPlayingMovies";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Header />
       <MainPoster />
       <PopularMovies />
+      <NowPlayingMovies />
     </div>
   );
 };

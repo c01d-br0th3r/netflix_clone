@@ -1,6 +1,4 @@
-import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import allActions from "../../actions";
+import React from "react";
 import styled from "styled-components";
 import Slider from "react-slick";
 
@@ -15,22 +13,14 @@ const Title = styled.div`
 
 const PosterContainer = styled.div``;
 
-const Poster = styled.img`
+const Poster = styled.div`
   width: 150px;
   height: 230px;
-  padding: 10px;
+  background-image: url(${(props) => props.poster});
+  background-size: cover;
 `;
 
-const PopularMoviesContainer = () => {
-  const popularMovies = useSelector((state) => state.popularMovies);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(allActions.popularMoviesActions.fetchPopularMovies());
-  }, []);
-
-  console.log(popularMovies);
-  const { loading, movies } = popularMovies;
+const Presenter = ({ loading, movies, title }) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -44,13 +34,12 @@ const PopularMoviesContainer = () => {
         <div>Loading...</div>
       ) : (
         <div>
-          <Title>지금 인기있는 영화</Title>
+          <Title>{title}</Title>
           <Slider {...settings}>
             {movies.map((m) => (
               <PosterContainer key={m.id}>
                 <Poster
-                  src={`https://image.tmdb.org/t/p/w400/${m.poster_path}`}
-                  alt={m.title}
+                  poster={`https://image.tmdb.org/t/p/w400/${m.poster_path}`}
                 />
               </PosterContainer>
             ))}
@@ -61,4 +50,4 @@ const PopularMoviesContainer = () => {
   );
 };
 
-export default PopularMoviesContainer;
+export default Presenter;

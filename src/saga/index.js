@@ -13,12 +13,28 @@ function* workerPopularMoviesSaga() {
     );
   } catch (error) {
     console.log(error);
-    yield put(allActions.popularMoviesActions.failFetchPopularMovies());
+    yield put(allActions.popularMoviesActions.failFetchPopularMovies(error));
+  }
+}
+
+function* workerNowPlayingMoviesSaga() {
+  try {
+    console.log("FETCH_NOW_PLAYING_MOVIES");
+    const {
+      data: { results },
+    } = yield call(api.nowPlayingMoviesApi);
+    yield put(
+      allActions.nowPlayingMoviesActions.successNowPlayingMovies(results)
+    );
+  } catch (error) {
+    console.log(error);
+    yield put(allActions.nowPlayingMoviesActions.failNowPlayingMovies(error));
   }
 }
 
 function* rootSaga() {
   yield takeEvery("FETCH_POPULAR_MOVIES", workerPopularMoviesSaga);
+  yield takeEvery("FETCH_NOW_PLAYING_MOVIES", workerNowPlayingMoviesSaga);
 }
 
 export default rootSaga;

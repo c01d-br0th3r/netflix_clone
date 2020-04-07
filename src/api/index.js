@@ -7,4 +7,10 @@ const popularMoviesApi = () => {
   return axios.get(`${BASE_URL}movie/popular?api_key=${API_KEY}&language=ko`);
 };
 
-export default { popularMoviesApi };
+const nowPlayingMoviesApi = () => {
+  return axios.get(
+    `${BASE_URL}movie/now_playing?api_key=${API_KEY}&language=ko`
+  );
+};
+
+export default { popularMoviesApi, nowPlayingMoviesApi };
