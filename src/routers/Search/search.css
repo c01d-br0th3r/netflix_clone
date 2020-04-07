@@ -1,0 +1,58 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  width: 100%;
+}
+
+.userForm {
+  border-bottom: 4px solid #f2f2f2;
+  border-radius: 3px;
+  margin-bottom: 40px;
+}
+
+.userInput {
+  all: unset;
+  width: 100%;
+  color: #f2f2f2;
+  opacity: 0.8;
+  font-size: 40px;
+  font-weight: 600;
+  padding: 20px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 500;
+  margin: 10px 0;
+  margin-top: 20px;
+}
+
+.loading {
+  margin-bottom: 20px;
+}
+
+.resultsContainer {
+  display: flex;
+  overflow: scroll;
+}
+
+.results {
+  display: flex;
+  padding: 5px;
+}
+
+img {
+  width: 150px;
+  margin-right: 20px !important;
+}
+
+.info__title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.info__overview {
+  font-size: 20px;
+}

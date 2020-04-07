@@ -32,9 +32,17 @@ function* workerNowPlayingMoviesSaga() {
   }
 }
 
+function* workerSearchMoviesSaga() {
+  console.log("Search!");
+  try {
+    const results = yield call(api.searchApi.searchMovies);
+  } catch (error) {}
+}
+
 function* rootSaga() {
   yield takeEvery("FETCH_POPULAR_MOVIES", workerPopularMoviesSaga);
   yield takeEvery("FETCH_NOW_PLAYING_MOVIES", workerNowPlayingMoviesSaga);
+  yield takeEvery("SEARCH_MOVIES", workerSearchMoviesSaga);
 }
 
 export default rootSaga;

@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import Search from "../routers/Search";
 
 const Container = styled.div`
   width: 100vh;
@@ -23,13 +25,22 @@ const Menu = styled.div`
   margin-right: 30px;
 `;
 
+const SLink = styled(Link)`
+  all: unset;
+  cursor: pointer;
+`;
+
 const Header = () => {
   return (
     <Container>
-      <Logo>ChanFlix</Logo>
+      <Logo>
+        <SLink to="/home">ChanFlix</SLink>
+      </Logo>
       <Menu>Movies</Menu>
       <Menu>TV Shows</Menu>
-      <Menu>Search</Menu>
+      <Menu>
+        <SLink to="/search">Search</SLink>
+      </Menu>
     </Container>
   );
 };
