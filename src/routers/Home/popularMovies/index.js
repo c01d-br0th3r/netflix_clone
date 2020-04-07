@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import allActions from "../../actions";
-import Presenter from "../Presenter";
+import allActions from "../../../actions";
+import Presenter from "../../../components/Presenter";
 
 const PopularMoviesContainer = () => {
   const popularMovies = useSelector((state) => state.popularMovies);

@@ -22,12 +22,14 @@ const Original = styled.div`
   margin-bottom: 10px;
   margin-left: 3px;
   letter-spacing: 3px;
+  opacity: 0.8;
 `;
 const Title = styled.div`
   font-size: 50px;
   font-weight: 700;
   margin-bottom: 20px;
   line-height: 65px;
+  opacity: 0.8;
 `;
 const Span = styled.span`
   color: #70a1ff;

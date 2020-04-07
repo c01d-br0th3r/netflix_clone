@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import allActions from "../../actions";
+import allActions from "../../../actions";
 import { useSelector, useDispatch } from "react-redux";
-import Presenter from "../Presenter";
+import Presenter from "../../../components/Presenter";
 
 const NowPlayingMovies = () => {
   const nowPlayingMovies = useSelector((state) => state.nowPlayingMovies);

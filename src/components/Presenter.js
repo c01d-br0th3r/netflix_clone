@@ -4,6 +4,7 @@ import Slider from "react-slick";
 
 const Container = styled.div`
   padding: 50px;
+  padding-bottom: 10px;
 `;
 const Title = styled.div`
   font-size: 24px;
