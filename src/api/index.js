@@ -13,4 +13,25 @@ const nowPlayingMoviesApi = () => {
   );
 };
 
-export default { popularMoviesApi, nowPlayingMoviesApi };
+const searchMoviesApi = (term) => {
+  return axios.get(
+    `${BASE_URL}search/movie?api_key=${API_KEY}&language=ko&query=${encodeURIComponent(
+      term
+    )}`
+  );
+};
+
+const searchTVApi = (term) => {
+  return axios.get(
+    `${BASE_URL}search/tv?api_key=${API_KEY}&language=ko&query=${encodeURIComponent(
+      term
+    )}`
+  );
+};
+
+export default {
+  popularMoviesApi,
+  nowPlayingMoviesApi,
+  searchMoviesApi,
+  searchTVApi,
+};

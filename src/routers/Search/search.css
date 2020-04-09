@@ -56,3 +56,20 @@ img {
 .info__overview {
   font-size: 20px;
 }
+
+.noImage {
+  font-size: 40px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.noPoster {
+  width: 150px;
+  height: 227px;
+  font-size: 18px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
