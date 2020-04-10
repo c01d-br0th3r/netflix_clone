@@ -44,6 +44,7 @@ const Search = () => {
                   {m.poster_path != null ? (
                     <img
                       src={`https://image.tmdb.org/t/p/w400/${m.poster_path}`}
+                      alt={m.title}
                     />
                   ) : (
                     <div className="noPoster">
@@ -69,6 +70,7 @@ const Search = () => {
                 <div className="results" key={t.id}>
                   <img
                     src={`https://image.tmdb.org/t/p/w400/${t.poster_path}`}
+                    alt={t.name}
                   />
                 </div>
               ))}
