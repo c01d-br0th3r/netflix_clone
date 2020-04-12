@@ -59,7 +59,7 @@ const Search = () => {
         </div>
       </div>
 
-      <div>
+      <div className="titleContainer">
         <div className="title">Search TVs</div>
         <div>
           {tvLoading ? (

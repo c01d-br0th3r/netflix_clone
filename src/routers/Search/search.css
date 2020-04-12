@@ -73,3 +73,11 @@ img {
   justify-content: space-around;
   align-items: center;
 }
+
+.titleContainer {
+  margin-top: 40px;
+}
+
+.title {
+  margin-bottom: 20px;
+}

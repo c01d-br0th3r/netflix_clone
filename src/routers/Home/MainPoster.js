@@ -65,20 +65,22 @@ const Bar = styled.div`
   );
   position: absolute;
   top: 55px;
+  border-radius: 2px;
 `;
 const Summary = styled.div`
   font-size: 25px;
   font-weight: 500;
 `;
 const Button = styled.button`
-  margin-left: 20px;
-  margin-right: 5px;
+  opacity: 0.8;
+  margin-left: 10px;
   &:nth-child(2) {
     margin-right: 10px;
   }
   &:hover {
     background-color: #f2f2f2;
     color: #020202;
+    opacity: 1;
   }
   width: 100px;
   height: 40px;
